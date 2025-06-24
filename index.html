@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modelos 3D - Feria del Novillo</title>
+  <link rel="icon" type="image/png" href="vacaS.png" />
+  <link href="style.css" rel="stylesheet" />
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #1d1d1d;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .contenedor {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .modelo-box {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      margin-bottom: 40px;
+      padding: 20px;
+    }
+
+    model-viewer {
+      width: 100%;
+      height: 400px;
+      background-color: #eaeaea;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #555;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Feria del Novillo - Modelos 3D</h1>
+  </header>
+
+  <div class="contenedor">
+
+    <div class="modelo-box">
+      <h2>Carne Cerdo</h2>
+      <model-viewer src="carne1.glb" camera-controls autoplay shadow-intensity="1" ar></model-viewer>
+    </div>
+
+    <div class="modelo-box">
+      <h2>Carne Res</h2>
+      <model-viewer src="carne4.glb" camera-controls autoplay shadow-intensity="1" ar></model-viewer>
+    </div>
+
+<model-viewer src="full details.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" autoplay animation-name="cuchillos.004Action">
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+
+    <!-- Puedes seguir agregando más -->
+    <!--
+    <div class="modelo-box">
+      <h2>Carne X</h2>
+      <model-viewer src="carneX.glb" camera-controls autoplay shadow-intensity="1" ar></model-viewer>
+    </div>
+    -->
+
+  </div>
+
+  <footer>
+    © 2025 Feria del Novillo. Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>
